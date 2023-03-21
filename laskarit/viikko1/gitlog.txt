@@ -1,0 +1,113 @@
+commit c4442450247170f3a347dc3042a3f121d9ceecf0
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:48:52 2023 +0200
+
+    "poistettin file1 ja muutettiin file2 nimeä. Molemmat filet tyhjiä ja  stageus tehtiin osissa josta syystä git sekoittaa file1 ja file2 keskenään"
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9f721ef2699ffcc6962d380f1b5c88ae76a9afbc
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:38:45 2023 +0200
+
+    "lisättiin dir tiedostoja ja filet 1-3"
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 74bb6f47a6d9aecb4bf9dfa364660a785a2d48ae
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:33:48 2023 +0200
+
+    "Muutettiin tiedostoja eka.txt ja kolmas.txt"
+
+ eka.txt    | 2 +-
+ kolmas.txt | 8 +++++++-
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+commit 9fbb9d290b50bea9ded43420a0693b8261692c2a
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:30:50 2023 +0200
+
+    "Muutettiin tiedoston tiedosto.txt nimeksi eka.txt"
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9330f57ef9df9263663a9663f7408ea42e60e459
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:28:12 2023 +0200
+
+    "Poistettiin toinen.txt"
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a2599b5490f35e56ad68ddb5bfc31e1b7ab00e22
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:25:16 2023 +0200
+
+    "Poistettiin pastesta osa, pastettiin lisää // tiedosto.txt"
+
+ tiedosto.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 557613b0a698dbdbd013d7a43ba960d630c7d7a2
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 15:22:17 2023 +0200
+
+    Paste tiedostoon tiedosto.txt
+
+ tiedosto.txt | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+
+commit c3e097d560871cd30d4bd94adee13454c5af9125
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 14:45:45 2023 +0200
+
+    lisättiin dir stuff
+
+ stuff/jokin_tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 619f5749798dd787df80fb3ae6b8ce9febb60ae2
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 14:44:22 2023 +0200
+
+    toinen.txt ja kolmas.txt muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ef325866db952f43393d5bca25ef80efc27dd25f
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 14:43:14 2023 +0200
+
+    lisätään kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d1edfc81d691f010c9f2f9a2bfb503a5e640fdc3
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 14:40:09 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 4c668917fae1928ad9386e57fcca2eca84c83b99
+Author: ogvirtan <ovirtanen96@gmail.com>
+Date:   Mon Mar 20 14:38:10 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
