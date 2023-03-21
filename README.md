@@ -11,5 +11,9 @@ Leipätekstiä leipätekstiä, leipätekstiä: "**lihavoitua leipätekstiä**". 
 <sub>smol txt</sub>
 
 [gitlog.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+
 Tehtävän 16 vaatima paikallinen muutos
+
 [komentorivi.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+Tehtävä 17 paikallinen muutos
