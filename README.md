@@ -9,3 +9,6 @@ Leipätekstiä leipätekstiä, leipätekstiä: "**lihavoitua leipätekstiä**". 
 **Lihavoitu _kursivoitu_ lihavoitu**
 
 <sub>smol txt</sub>
+
+[gitlog.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
