@@ -111,3 +111,6 @@ Date:   Mon Mar 20 14:38:10 2023 +0200
 
  tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
+
+/////////////////////////////////////////////////
+Tehtävässä 17 vaadittu etärepositorioon suoraan tehty muutos.
