@@ -41,4 +41,4 @@ class Kassapaate:
             kortti.lataa_rahaa(summa)
             self.kassassa_rahaa += summa
         else:
-            return
+            return False
