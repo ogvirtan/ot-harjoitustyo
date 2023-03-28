@@ -1,7 +1,7 @@
 # Blackjack Strategy Tool vaatimusmäärittely
 
 Työkalun funktiona on harjoitella kullekkin pelitilanteelle optimaalista strategiaa. Strategia perustuu alla olevaan strategiakarttaan.
-![kartta](/Strategy_flowchart.jpg)
+![kartta](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/Strategy_flowchart.jpg)
 
 Sovellukseen ei tarvita muita käyttäjärooleja normaalikäyttäjän lisäksi. Normaalikäyttäjä pystyy ainakin:
 
