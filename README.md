@@ -17,3 +17,5 @@ Tehtävän 16 vaatima paikallinen muutos
 [komentorivi.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 Tehtävä 17 paikallinen muutos
+
+[työaikakirjanpito](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
