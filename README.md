@@ -1,21 +1,9 @@
-# Otsikko
-## Alaotsikko
+# Blackjack Strategy Tool
 
-Leipätekstiä leipätekstiä, leipätekstiä: "**lihavoitua leipätekstiä**". Leipätekstiä *kursivoitua leipätekstiä* lisää leipätekstiä, ~~paahtoleipätekstiä~~ leipätekstiä.
+Sovelluksen tarkoituksena on harjoitella optimaalista pelistrategiaa Blackjack-pelissä.
 
-### Väliotsikko
-
-
-**Lihavoitu _kursivoitu_ lihavoitu**
-
-<sub>smol txt</sub>
-
-[gitlog.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-Tehtävän 16 vaatima paikallinen muutos
-
-[komentorivi.txt](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-Tehtävä 17 paikallinen muutos
-
-[työaikakirjanpito](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+##Dokumentaatio
+[README.md](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/README.md)
+[Strategy flowchart](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/Strategy_flowchart.jpg)
+[vaatimusmäärittely](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[changelog](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)

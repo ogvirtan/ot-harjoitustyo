@@ -5,8 +5,6 @@ Työkalun funktiona on harjoitella kullekkin pelitilanteelle optimaalista strate
 
 Sovellukseen ei tarvita muita käyttäjärooleja normaalikäyttäjän lisäksi. Normaalikäyttäjä pystyy ainakin:
 
-+ käyttämään sovellusta luomatta käyttäjätunnuksia
-+ luoda käyttäjätunnuksen ja kirjautua sisään
 + pystyy pelaamaan sovelluksen avulla käsiä valiten aina mielestään sopivan strategian tilanteeseen
 + pystyy tulostamaan analyysiraportin, jossa pelaajan strategian tarkkuus näkyy verrattuna optimaaliseen
 
