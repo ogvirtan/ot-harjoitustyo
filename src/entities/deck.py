@@ -1,39 +1,34 @@
 import random
 from .card import Card
-from .player import Player
+
 
 class Deck:
 
     def __init__(self):
         self.deck = []
-        for i in range(2,15):
-            if i == 11:
-                i ="J"
-            elif i == 12:
-                i = "Q"
-            elif i == 13:
-                i = "K"
-            elif i == 14:
-                i = "A"
+        self.add_deck()
+        self._shuffle()
+
+    def add_deck(self):
+        for i in range(2, 15):
             card = Card(i)
             temp = [card] * 4
             self.deck.extend(temp)
-        self._shuffle()
-        self.size = len(self.deck)
-    
+
     def _shuffle(self):
         random.shuffle(self.deck)
 
-    def _deal_new_hand(self, player):
-        #check for cards in deck
+    def deal_new_hand(self):
+        self._check_for_deck_size()
         cards = []
         cards.append(self.deck.pop())
         cards.append(self.deck.pop())
-        self.size -= 2
-        player._new_hand(cards)
-    
-    def __str__(self):
-        return str(self.deck)
-    
-    def __repr__(self):
-        return self.__str__()
+        return cards
+
+    def _deck_size(self):
+        return len(self.deck)
+
+    def _check_for_deck_size(self):
+        if self._deck_size() < 3:
+            self.add_deck()
+        self._shuffle()

@@ -1,8 +1,9 @@
 from ui.user_interface import User_interface
 
+
 def main():
-    ui = User_interface()
-    ui._start()
+    user_interface = User_interface()
+    user_interface.start()
 
 
 if __name__ == "__main__":
