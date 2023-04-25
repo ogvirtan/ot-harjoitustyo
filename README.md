@@ -16,6 +16,9 @@ Sovelluksen voi esim. käynnistää komennolla poetry run invoke start
 + [changelog](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 + [työaikakirjanpito](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
+## Releases
+[Viikon 5 Release](https://github.com/ogvirtan/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Lähteistä
 Aloitusruudun ASCII-teksti on generoitu käyttäen [tätä](https://patorjk.com/software/taag/#p=display&f=Standard&t=Type%20Something%20) sivua.
 Strategy flowchart on puolestaan peräisin [täältä](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/).
