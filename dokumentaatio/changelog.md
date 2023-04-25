@@ -10,3 +10,8 @@
 - Käyttöliittymässä voi navigoida näppäinkomennoilla
 - Statistiikat voi tulostaa ja nollata
 - Pelaaja voi valita strategian ja sovellus kommentoi valitun strategian oikeellisuutta
+
+## Viikko 5
+
+- Lisätty asetusvalikko
+- Pelaaja voi valita onko mahdollista luovuttaa tai tuplata splitin jälkeen

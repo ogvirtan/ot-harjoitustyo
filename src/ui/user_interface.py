@@ -10,12 +10,17 @@ GAMECOMMANDS = {
 }
 MENUCOMMANDS = {
     "Q": "Type 'Q' to quit",
-    "S": "Type 'S' for statistics",
+    "O": "Type 'O' for Options",
     "P": "Type 'P' to play",
+    "S": "Type 'S' for statistics"
 }
 STATCOMMANDS = {
     "Q": "Type 'Q' to quit to menu",
     "R": "Type 'R' to reset statistics"
+}
+OPTIONCOMMANDS = {
+    "1: Surrender": "ON",
+    "2: Double after split allowed": "ON"
 }
 
 
@@ -36,6 +41,8 @@ class User_interface:
                 self._statistics()
             elif menucommand == "P":
                 self._game()
+            elif menucommand == "O":
+                self._options()
 
     def _menu_screen(self):
         print(f"{self.separator}\n    ____  _        _    ____ _  __   _   _    ____ _  __\n\
@@ -114,6 +121,35 @@ class User_interface:
                     f"\nInvalid command, see commands below:\n{self.separator}")
                 self._instructions()
 
+    def _options(self):
+        while True:
+            self._options_listed()
+            print(f"Type the number of setting you want to change")
+            print(f"\nType 'Q' to quit to menu\n")
+            option_command = input(f"\n{self.separator}\ninput: ").upper()
+            print(f"{self.separator}")
+            if option_command == "Q":
+                break
+            if option_command == "1":
+                if OPTIONCOMMANDS.get("1: Surrender") == "ON":
+                    OPTIONCOMMANDS["1: Surrender"] = "OFF"
+                else:
+                    OPTIONCOMMANDS["1: Surrender"] = "ON"
+                self.tool.change_surrender_status()
+            if option_command == "2":
+                if OPTIONCOMMANDS.get("2: Double after split allowed") == "ON":
+                    OPTIONCOMMANDS["2: Double after split allowed"] = "OFF"
+                else:
+                    OPTIONCOMMANDS["2: Double after split allowed"] = "ON"
+                self.tool.change_das_status()
+
+    def _options_listed(self):
+        for instruction in OPTIONCOMMANDS:
+            buffer = " " * \
+                (60-(len(instruction)+len(OPTIONCOMMANDS[instruction])))
+            print(f"{instruction}{buffer}{OPTIONCOMMANDS[instruction]}")
+            print("\n")
+
     def _instructions(self):
         for instruction in GAMECOMMANDS:
             print(GAMECOMMANDS[instruction])
@@ -121,7 +157,11 @@ class User_interface:
 
     def _menu_commands(self):
         for command in MENUCOMMANDS:
-            print(f"{MENUCOMMANDS[command]}", end="  ")
+            if command == "P":
+                print("\n")
+            if command == "O":
+                print("", end="   ")
+            print(f"{MENUCOMMANDS[command]}", end="                     ")
 
     def _stat_commands(self):
         for command in STATCOMMANDS:

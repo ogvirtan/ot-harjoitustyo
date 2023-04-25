@@ -9,4 +9,6 @@
 | 14.4. | 3.0    | Sovelluksen käyttöliittymän, näkymien, toimintojen laajennus |
 | 15.4. | 3.0    | Testien kirjoittaminen |
 | 16.4. | 2.0    | Koodin putsaaminen pylintin avulla, testien kirjoittaminen |
-| total | 16.5   | Sovelluksen työtunnit yhteensä |
+| 24.4. | 2.5    | Asetusvalikon lisäys, testien kirjoittaminen |
+| 25.4. | 1.5    | Testien kirjoittaminen |
+| total | 20.5   | Sovelluksen työtunnit yhteensä |

@@ -10,6 +10,8 @@ class Tool:
         self.tracking_dict = {"W": 0,
                               "L": 0
                               }
+        self.surrender = True
+        self.das = True
 
     def tool_new_hand(self):
         player_new_hand = self.deck.deal_new_hand()
@@ -64,12 +66,18 @@ class Tool:
         if player_upcard_value == 7 and house_upcard_value < 8:
             return "Y"
         if player_upcard_value == 6 and house_upcard_value < 7:
+            if not self.das and house_upcard_value == 2:
+                return self._hard_totals()
             return "Y"
-        if player_upcard_value == 4 and house_upcard_value in [5, 6]:
+        if player_upcard_value == 4 and self.das and house_upcard_value in [5, 6]:
             return "Y"
         if player_upcard_value == 3 and house_upcard_value < 8:
+            if house_upcard_value < 4 and not self.das:
+                return self._hard_totals()
             return "Y"
         if player_upcard_value == 2 and house_upcard_value < 8:
+            if house_upcard_value < 4 and not self.das:
+                return self._hard_totals()
             return "Y"
         # Hard totals if not splitting
         return self._hard_totals()
@@ -83,9 +91,7 @@ class Tool:
         if we_check_this_card == 8:
             if self.house.upcard().ret_value() == 6:
                 return "D"
-            if self.house.upcard().ret_value() <= 8:
-                return "S"
-            return "H"
+            return "S"
         if we_check_this_card == 7:
             if self.house.upcard().ret_value() <= 6:
                 return "D"
@@ -111,6 +117,11 @@ class Tool:
             return "S"
         if 13 <= player_total <= 16:
             # check for surrender
+            if self.surrender:
+                if 9 <= self.house.upcard().ret_value() <= 11 and player_total == 16:
+                    return "F"
+                if self.house.upcard().ret_value() == 10 and player_total == 15:
+                    return "F"
             if self.house.upcard().ret_value() < 7:
                 return "S"
             return "H"
@@ -129,3 +140,15 @@ class Tool:
                 return "D"
             return "H"
         return "H"
+
+    def change_surrender_status(self):
+        if self.surrender:
+            self.surrender = False
+        else:
+            self.surrender = True
+
+    def change_das_status(self):
+        if self.das:
+            self.das = False
+        else:
+            self.das = True
