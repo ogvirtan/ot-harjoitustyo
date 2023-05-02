@@ -11,4 +11,5 @@
 | 16.4. | 2.0    | Koodin putsaaminen pylintin avulla, testien kirjoittaminen |
 | 24.4. | 2.5    | Asetusvalikon lisäys, testien kirjoittaminen |
 | 25.4. | 1.5    | Testien kirjoittaminen |
-| total | 20.5   | Sovelluksen työtunnit yhteensä |
+| 2.5.  | 2.0    | Docstring dokumentaatio, testikattavuuden laajentaminen |
+| total | 22.5   | Sovelluksen työtunnit yhteensä |

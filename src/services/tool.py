@@ -3,6 +3,22 @@ from entities.player import Player
 
 
 class Tool:
+    """Class Tool is in charge of the application logic.
+
+    Players hand and the card that house is showing are taken into account here,
+    and optimal strategy is being determined based on what options are available
+    to the player. Tool is in charge of tracking how many times the player picked
+    correctly or incorrectly and for the resetting of said statistics.
+
+    Attributes:
+        deck: deck of cards configured to be infinite for the purposes of the game
+        player: the player making strategy choices
+        house: the player to beat using optimal strategy
+        tracking_dict: dictionary for keeping score on whether the player played optinal or not
+        surrender: boolean determining whether surrendering is an option
+        das: boolean determining whether doubling after split is an option
+    """
+
     def __init__(self):
         self.deck = Deck()
         self.player = Player()
@@ -14,47 +30,68 @@ class Tool:
         self.das = True
 
     def tool_new_hand(self):
+        """Get new hand for house and player
+        """
         player_new_hand = self.deck.deal_new_hand()
         house_new_hand = self.deck.deal_new_hand()
         self.player.new_hand(player_new_hand)
         self.house.new_hand(house_new_hand)
 
     def show_hands(self):
+        """Have player show his hand and house show their top card
+
+            Returns:
+                a string containing information about the game state
+        """
         upcard = self.house.upcard()
         player_hand = self.player.current_hand()
         return f"\nHouse is showing {upcard.face}\n\nyou have {player_hand}\n"
 
     def check_for_blackjack(self):
+        """Check if player hand has blackjack
+
+            Returns:
+                boolean value
+        """
         if self.player.get_total() == 21:
             return True
         return False
 
     def tracking(self, player_input, best_input):
+        """Add note of the strategy the player chose
+        """
         if player_input == best_input:
             self.tracking_dict["W"] += 1
         else:
             self.tracking_dict["L"] += 1
 
     def return_stats(self):
+        """Returns:
+            statistics of the players strategy accuracy
+        """
         return self.tracking_dict
 
     def reset_stats(self):
+        """Reset statistics
+        """
         self.tracking_dict["W"] = 0
         self.tracking_dict["L"] = 0
 
     def strategy(self):
-        # Splitting pairs strategy
+        """Determining which method needs to be called
+        """
         if self.player.get_pair():
             return self._split_pairs()
-
-        # Soft totals
         if self.player.downcard().face == "A" or self.player.upcard().face == "A":
             return self._ace_in_hand()
-
-        # Hard totals/surrender
         return self._hard_totals()
 
     def _split_pairs(self):
+        """Check if pairs should be split
+
+            Returns:
+                a character which represents the optimal strategy
+        """
         player_upcard_value = self.player.upcard().ret_value()
         house_upcard_value = self.house.upcard().ret_value()
         if player_upcard_value == 11:
@@ -79,10 +116,14 @@ class Tool:
             if house_upcard_value < 4 and not self.das:
                 return self._hard_totals()
             return "Y"
-        # Hard totals if not splitting
         return self._hard_totals()
 
     def _ace_in_hand(self):
+        """Checks for the optimal strategy when the player is holding an ace
+
+        Returns:
+                a character which represents the optimal strategy
+        """
         we_check_this_card = self.player.downcard().ret_value()
         if self.player.downcard().face == "A":
             we_check_this_card = self.player.upcard().ret_value()
@@ -112,6 +153,11 @@ class Tool:
         return "H"
 
     def _hard_totals(self):
+        """Checks for the optimal strategy when only the total value of hand matters
+
+            Returns:
+                a character which represents the optimal strategy
+        """
         player_total = self.player.get_total()
         if player_total >= 17:
             return "S"
@@ -142,12 +188,16 @@ class Tool:
         return "H"
 
     def change_surrender_status(self):
+        """Enables/disables the option to surrender
+        """
         if self.surrender:
             self.surrender = False
         else:
             self.surrender = True
 
     def change_das_status(self):
+        """Enables/disables the option to double after split
+        """
         if self.das:
             self.das = False
         else:

@@ -45,6 +45,7 @@ class User_interface:
                 self._options()
 
     def _menu_screen(self):
+        # menu screen
         print(f"{self.separator}\n    ____  _        _    ____ _  __   _   _    ____ _  __\n\
    | __ )| |      / \  / ___| |/ /  | | / \  / ___| |/ /\n\
    |  _ \| |     / _ \| |   | ' /_  | |/ _ \| |   | ' / \n\
@@ -62,6 +63,7 @@ class User_interface:
                    |_| \___/ \___/|_____|               \n\n")
 
     def _statistics(self):
+        # statistics screen
         while True:
             Wins = self.tool.return_stats()["W"]
             Losses = self.tool.return_stats()["L"]
@@ -92,6 +94,7 @@ class User_interface:
                 self.tool.reset_stats()
 
     def _game(self):
+        # game screen
         self._instructions()
         while True:
             self.tool.tool_new_hand()
@@ -122,6 +125,7 @@ class User_interface:
                 self._instructions()
 
     def _options(self):
+        # options screen
         while True:
             self._options_listed()
             print(f"Type the number of setting you want to change")
@@ -144,6 +148,7 @@ class User_interface:
                 self.tool.change_das_status()
 
     def _options_listed(self):
+        # Listing options for options screen
         for instruction in OPTIONCOMMANDS:
             buffer = " " * \
                 (60-(len(instruction)+len(OPTIONCOMMANDS[instruction])))
@@ -151,11 +156,13 @@ class User_interface:
             print("\n")
 
     def _instructions(self):
+        # Listing instructions for game screen
         for instruction in GAMECOMMANDS:
             print(GAMECOMMANDS[instruction])
         print("\n")
 
     def _menu_commands(self):
+        # Listing commands for menu screen
         for command in MENUCOMMANDS:
             if command == "P":
                 print("\n")
@@ -164,5 +171,6 @@ class User_interface:
             print(f"{MENUCOMMANDS[command]}", end="                     ")
 
     def _stat_commands(self):
+        # Listing commands for statistics screen
         for command in STATCOMMANDS:
             print(f"{STATCOMMANDS[command]}", end="       ")

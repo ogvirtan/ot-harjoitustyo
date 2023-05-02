@@ -1176,16 +1176,16 @@ class TestPlayer(unittest.TestCase):
         self.assertEqual(self.tool._hard_totals(), "S")
     # No need to test for 21 because, because player doesn't play when they get blackjack
 
-#Soft totals
+# Soft totals
 
-    #single outcome A, 9
+    # single outcome A, 9
     def test_ace_in_hand_with_9(self):
         hand = [Card(14), Card(9)]
         self.tool.player.new_hand(hand)
         self.tool.house.new_hand(hand)
         self.assertEqual(self.tool._ace_in_hand(), "S")
 
-    #split outcome A, 8
+    # split outcome A, 8
     def test_ace_in_hand_with_8_house_showing_2(self):
         player_hand = [Card(14), Card(8)]
         house_hand = [Card(2), Card(2)]
@@ -1255,22 +1255,22 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "S")
-    
-    #split outcome A, 7
+
+    # split outcome A, 7
     def test_ace_in_hand_7_house_showing_2(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(2), Card(2)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "D")
-    
+
     def test_ace_in_hand_7_house_showing_3(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(3), Card(3)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "D")
-    
+
     def test_ace_in_hand_7_house_showing_4(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(4), Card(4)]
@@ -1284,14 +1284,14 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "D")
-    
+
     def test_ace_in_hand_7_house_showing_6(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(6), Card(6)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "D")
-    
+
     def test_ace_in_hand_7_house_showing_7(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(7), Card(7)]
@@ -1305,7 +1305,7 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "S")
-    
+
     def test_ace_in_hand_7_house_showing_9(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(9), Card(9)]
@@ -1319,15 +1319,15 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
+
     def test_ace_in_hand_7_house_showing_ace(self):
         player_hand = [Card(7), Card(14)]
         house_hand = [Card(14), Card(14)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
-    #Split outcome A, 6
+
+    # Split outcome A, 6
     def test_ace_in_hand_6_house_showing_2(self):
         player_hand = [Card(6), Card(14)]
         house_hand = [Card(2), Card(2)]
@@ -1390,15 +1390,15 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
+
     def test_ace_in_hand_6_house_showing_ace(self):
         player_hand = [Card(6), Card(14)]
         house_hand = [Card(14), Card(14)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
-        self.assertEqual(self.tool._ace_in_hand(), "H")   
-    
-    #Split outcome A, 5
+        self.assertEqual(self.tool._ace_in_hand(), "H")
+
+    # Split outcome A, 5
     def test_ace_in_hand_5_house_showing_2(self):
         player_hand = [Card(5), Card(14)]
         house_hand = [Card(2), Card(2)]
@@ -1461,15 +1461,15 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
+
     def test_ace_in_hand_5_house_showing_ace(self):
         player_hand = [Card(5), Card(14)]
         house_hand = [Card(14), Card(14)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
-        self.assertEqual(self.tool._ace_in_hand(), "H") 
+        self.assertEqual(self.tool._ace_in_hand(), "H")
 
-    #Split outcome A, 4
+    # Split outcome A, 4
     def test_ace_in_hand_4_house_showing_2(self):
         player_hand = [Card(4), Card(14)]
         house_hand = [Card(2), Card(2)]
@@ -1532,15 +1532,15 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
+
     def test_ace_in_hand_4_house_showing_ace(self):
         player_hand = [Card(4), Card(14)]
         house_hand = [Card(14), Card(14)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
-        self.assertEqual(self.tool._ace_in_hand(), "H") 
+        self.assertEqual(self.tool._ace_in_hand(), "H")
 
-    #Split outcome A, 3
+    # Split outcome A, 3
     def test_ace_in_hand_3_house_showing_2(self):
         player_hand = [Card(3), Card(14)]
         house_hand = [Card(2), Card(2)]
@@ -1603,15 +1603,15 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
+
     def test_ace_in_hand_3_house_showing_ace(self):
         player_hand = [Card(3), Card(14)]
         house_hand = [Card(14), Card(14)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
-        self.assertEqual(self.tool._ace_in_hand(), "H") 
-    
-    #Split outcome A, 2
+        self.assertEqual(self.tool._ace_in_hand(), "H")
+
+    # Split outcome A, 2
     def test_ace_in_hand_2_house_showing_2(self):
         player_hand = [Card(2), Card(14)]
         house_hand = [Card(2), Card(2)]
@@ -1674,10 +1674,42 @@ class TestPlayer(unittest.TestCase):
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
-    
+
     def test_ace_in_hand_2_house_showing_ace(self):
         player_hand = [Card(2), Card(14)]
         house_hand = [Card(14), Card(14)]
         self.tool.player.new_hand(player_hand)
         self.tool.house.new_hand(house_hand)
         self.assertEqual(self.tool._ace_in_hand(), "H")
+
+    # Strategy testing
+    def test_strategy_returns_correct_output_with_aces(self):
+        facecard_hand = [Card(14), Card(14)]
+        self.tool.tool_new_hand()
+        self.tool.player.new_hand(facecard_hand)
+        self.assertEqual(self.tool.strategy(), "Y")
+    # Goes to split pairs, but exits correctly when splitting not the best option
+
+    def test_strategy_returns_correct_output_with_tens(self):
+        facecard_hand = [Card(11), Card(12)]
+        self.tool.tool_new_hand()
+        self.tool.player.new_hand(facecard_hand)
+        self.assertEqual(self.tool.strategy(), "S")
+    # Goes to _ace_in_hand_with ace in hand
+
+    def test_strategy_returns_correct_output_with_aces(self):
+        house_hand = [Card(7), Card(7)]
+        facecard_hand = [Card(6), Card(14)]
+        self.tool.tool_new_hand()
+        self.tool.player.new_hand(facecard_hand)
+        self.tool.house.new_hand(house_hand)
+        # would be stand in hard totals, but H in ace in hand
+        self.assertEqual(self.tool.strategy(), "H")
+
+    def test_strategy_returns_correct_output_with_16(self):
+        facecard_hand = [Card(10), Card(6)]
+        house_hand = [Card(7), Card(7)]
+        self.tool.tool_new_hand()
+        self.tool.player.new_hand(facecard_hand)
+        self.tool.house.new_hand(house_hand)
+        self.assertEqual(self.tool.strategy(), "H")

@@ -53,3 +53,13 @@ class TestPlayer(unittest.TestCase):
         self.test_hand = [Card(8), Card(8), Card(8)]
         self.player.new_hand(self.test_hand)
         self.assertFalse(self.player.get_pair())
+
+    def test__str__returns_correct_output(self):
+        self.test_hand = [Card(8), Card(14)]
+        self.player.new_hand(self.test_hand)
+        self.assertEqual(self.player.__str__(), "[8, A]")
+
+    def test__repr__returns_correct_output(self):
+        self.test_hand = [Card(8), Card(14)]
+        self.player.new_hand(self.test_hand)
+        self.assertEqual(self.player.__repr__(), "[8, A]")

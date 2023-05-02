@@ -15,3 +15,7 @@
 
 - Lisätty asetusvalikko
 - Pelaaja voi valita onko mahdollista luovuttaa tai tuplata splitin jälkeen
+
+## Viikko 6 
+
+- Ei muutoksia toiminnallisuuteen

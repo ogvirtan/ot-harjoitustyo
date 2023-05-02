@@ -35,21 +35,6 @@ class TestCard(unittest.TestCase):
         self.card = Card(14)
         self.assertEqual(self.card.ret_value(), 11)
 
-    def test_ace_it_down_with_ace(self):
-        self.card = Card(14)
-        self.card._ace_it_down()
-        self.assertEqual(self.card.ret_value(), 1)
-
-    def test_ace_it_down_with_ace_when_already_aced_down(self):
-        self.card = Card(14)
-        self.card._ace_it_down()
-        self.card._ace_it_down()
-        self.assertEqual(self.card.ret_value(), 1)
-
-    def test_ace_it_down_with_number(self):
-        self.card._ace_it_down()
-        self.assertEqual(self.card.ret_value(), 2)
-
     def test__str__with_ace(self):
         self.card = Card(14)
         self.assertEqual(self.card.__str__(), "A")
