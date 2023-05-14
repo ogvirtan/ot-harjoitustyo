@@ -9,7 +9,7 @@ Sovelluslogiikasta vastaavalle luokalle Tool on kirjoitettu kattavat testit test
 ## Testikattavuus
 Alla on kuvakaappaus coverage-report komennon generoimasta testikattavuusraportista. Testikattavuusraportissa ei testata käyttöliittymää, käyttöliittymä on testattu manuaalisesti.
 
-![Testikattavuusraportti](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/coverage-report.JPG)
+![Testikattavuusraportti](https://github.com/ogvirtan/ot-harjoitustyo/blob/master/dokumentaatio/coverage-report.jpg)
 
 ## Järjestelmätestaus
 

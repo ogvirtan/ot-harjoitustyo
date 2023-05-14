@@ -15,4 +15,4 @@
 | 8.5.  | 1.0    | Arkkitehtuurikuvauksen, vaatimuuskattavuuden päivittäminen |
 | 10.5. | 1.0    | Arkkitehtuuri.md:n päivittäminen |
 | 14.5. | 1.5    | Käyttöohjeen, testausdokumentin tekeminen |
-| total | 24.5   | Sovelluksen työtunnit yhteensä |
+| total | 26.0   | Sovelluksen työtunnit yhteensä |
