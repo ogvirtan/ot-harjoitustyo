@@ -30,5 +30,3 @@ class TestDeck(unittest.TestCase):
         self.deck.deck = []
         self.deck.deal_new_hand()
         self.assertEqual(self.deck._deck_size(), 50)
-
-    # def test_shuffle(self):

@@ -33,7 +33,7 @@ class User_interface:
         while True:
             self._menu_screen()
             self._menu_commands()
-            menucommand = input(f"\n{self.separator}\ninput: ").upper()
+            menucommand = input(f"\n{self.separator}\ncommand: ").upper()
             print(f"{self.separator}")
             if menucommand == "Q":
                 break
@@ -87,7 +87,7 @@ class User_interface:
                         f"\n\n\n\n\n\n\nYou picked the correct strategy {Wins} times, and the wrong\nstrategy {Losses} times.\n")
                     print("Your percentage of success was %.2f\n\n\n\n\n\n" % prctage)
             self._stat_commands()
-            statcommand = input(f"\n{self.separator}\ninput: ").upper()
+            statcommand = input(f"\n{self.separator}\ncommand: ").upper()
             if statcommand == "Q":
                 break
             elif statcommand == "R":
@@ -96,8 +96,11 @@ class User_interface:
     def _game(self):
         # game screen
         self._instructions()
+        invalidcommand = False
         while True:
-            self.tool.tool_new_hand()
+            if not invalidcommand:
+                self.tool.tool_new_hand()
+            invalidcommand = False
             print(self.tool.show_hands())
 
             if self.tool.check_for_blackjack():
@@ -122,6 +125,7 @@ class User_interface:
             else:
                 print(
                     f"\nInvalid command, see commands below:\n{self.separator}")
+                invalidcommand = True
                 self._instructions()
 
     def _options(self):
@@ -130,7 +134,7 @@ class User_interface:
             self._options_listed()
             print(f"Type the number of setting you want to change")
             print(f"\nType 'Q' to quit to menu\n")
-            option_command = input(f"\n{self.separator}\ninput: ").upper()
+            option_command = input(f"\n{self.separator}\ncommand: ").upper()
             print(f"{self.separator}")
             if option_command == "Q":
                 break

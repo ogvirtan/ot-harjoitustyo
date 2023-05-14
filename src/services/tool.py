@@ -147,7 +147,6 @@ class Tool:
             if 4 <= self.house.upcard().ret_value() <= 6:
                 return "D"
             return "H"
-        # card is either 3 or 2
         if 5 <= self.house.upcard().ret_value() <= 6:
             return "D"
         return "H"
@@ -162,7 +161,6 @@ class Tool:
         if player_total >= 17:
             return "S"
         if 13 <= player_total <= 16:
-            # check for surrender
             if self.surrender:
                 if 9 <= self.house.upcard().ret_value() <= 11 and player_total == 16:
                     return "F"

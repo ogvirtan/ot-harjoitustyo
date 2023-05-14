@@ -1164,14 +1164,14 @@ class TestPlayer(unittest.TestCase):
         self.assertEqual(self.tool._hard_totals(), "S")
 
     # Total of 19
-    def test_hard_totals_returns_correct_output_with_total_of_18(self):
-        player_hand = [Card(8), Card(10)]
+    def test_hard_totals_returns_correct_output_with_total_of_19(self):
+        player_hand = [Card(9), Card(10)]
         self.tool.player.new_hand(player_hand)
         self.assertEqual(self.tool._hard_totals(), "S")
 
     # Total of 20
-    def test_hard_totals_returns_correct_output_with_total_of_18(self):
-        player_hand = [Card(8), Card(10)]
+    def test_hard_totals_returns_correct_output_with_total_of_20(self):
+        player_hand = [Card(10), Card(10)]
         self.tool.player.new_hand(player_hand)
         self.assertEqual(self.tool._hard_totals(), "S")
     # No need to test for 21 because, because player doesn't play when they get blackjack
